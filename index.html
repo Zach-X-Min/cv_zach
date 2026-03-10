@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徐方源 - 数据分析师 个人简历</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#4096ff',
+                        neutral: '#1f2937',
+                        light: '#f3f4f6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px];
+            }
+            .section-title {
+                @apply text-2xl font-bold text-neutral border-l-4 border-primary pl-3 py-1 mb-6;
+            }
+            .timeline-item {
+                @apply relative pl-8 pb-8 before:absolute before:left-0 before:top-2 before:w-4 before:h-4 before:rounded-full before:bg-primary before:border-2 before:border-white;
+            }
+            .timeline-item:last-child {
+                @apply pb-0;
+            }
+            .achievement {
+                @apply text-primary font-semibold;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 顶部导航栏 - 移动端固定，PC端悬浮 -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50 py-3 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <span class="font-bold text-primary text-lg">徐方源 | 数据分析师</span>
+            <div class="hidden md:flex gap-6">
+                <a href="#info" class="text-neutral hover:text-primary transition-colors">个人信息</a>
+                <a href="#work" class="text-neutral hover:text-primary transition-colors">工作经历</a>
+                <a href="#intern" class="text-neutral hover:text-primary transition-colors">实习经历</a>
+                <a href="#edu" class="text-neutral hover:text-primary transition-colors">教育背景</a>
+                <a href="#skill" class="text-neutral hover:text-primary transition-colors">专业技能</a>
+            </div>
+            <!-- 移动端菜单按钮 -->
+            <button class="md:hidden text-neutral text-xl" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端下拉菜单 -->
+        <div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-md px-4 py-2" id="mobileMenu">
+            <div class="flex flex-col gap-3 py-2">
+                <a href="#info" class="text-neutral hover:text-primary transition-colors">个人信息</a>
+                <a href="#work" class="text-neutral hover:text-primary transition-colors">工作经历</a>
+                <a href="#intern" class="text-neutral hover:text-primary transition-colors">实习经历</a>
+                <a href="#edu" class="text-neutral hover:text-primary transition-colors">教育背景</a>
+                <a href="#skill" class="text-neutral hover:text-primary transition-colors">专业技能</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容容器 -->
+    <main class="max-w-4xl mx-auto px-4 md:px-8 pt-24 pb-16">
+        <!-- 个人信息模块 -->
+        <section id="info" class="mb-12 bg-white rounded-lg shadow p-6 md:p-8 card-hover">
+            <h2 class="section-title mb-8">个人信息</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-user-circle text-primary text-xl w-6 text-center"></i>
+                    <span class="text-lg">徐方源</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-phone text-primary text-xl w-6 text-center"></i>
+                    <span>(+86)186-5814-8167 <span class="text-sm text-gray-500">(在职优先微信联系)</span></span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-primary text-xl w-6 text-center"></i>
+                    <a href="mailto:zjxfy123@163.com" class="text-neutral hover:text-primary transition-colors">zjxfy123@163.com</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt text-primary text-xl w-6 text-center"></i>
+                    <span>杭州市</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作经历模块 -->
+        <section id="work" class="mb-12 bg-white rounded-lg shadow p-6 md:p-8 card-hover">
+            <h2 class="section-title">工作经历</h2>
+            <div class="relative border-l-2 border-gray-200 pl-4">
+                <!-- 税友集团 -->
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                        <h3 class="font-bold text-lg">税友集团(个税App)</h3>
+                        <span class="text-gray-500">杭州</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <p class="font-semibold">数据分析师</p>
+                        <p class="text-sm text-gray-500">2022.02 - 至今</p>
+                    </div>
+                    <p class="text-gray-700 mb-3">负责B端财税代理线业务，搭建和优化指标体系、核心数据监控与预警、用户画像和分层运营，提升营收和效率</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-2">
+                        <li>用户分层运营：挖掘高转化企业核心特征，利用TGI指数构建客户分层体系支撑精准运营，提升转化率<span class="achievement">11pct</span>。</li>
+                        <li>流失预警：挖掘高流失风险特征，利用业务规则和XGBoost模型，搭建流失监控与预警机制，挽回<span class="achievement">20+</span>高价值客户。</li>
+                        <li>纳新专项：搭建线索评分体系，筛选高精准线索，月人均有效商机数量增加<span class="achievement">40+</span>，月线索成单转化提升<span class="achievement">3pct</span>。</li>
+                        <li>经营分析：搭建经营指标体系、监控与预警机制，输出数据洞察并推动改善闭环，支撑管理层高效决策与业绩提升。</li>
+                        <li>AI自助取数：梳理指标口径，搭建自然语言查询流程，实现AI自动取数及结果推送，大幅提升业务取数效率。</li>
+                    </ul>
+                </div>
+
+                <!-- 婚芭莎会展有限公司 -->
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                        <h3 class="font-bold text-lg">中国婚博会-婚芭莎会展有限公司</h3>
+                        <span class="text-gray-500">杭州</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <p class="font-semibold">数据分析师</p>
+                        <p class="text-sm text-gray-500">2021.07 - 2021.11</p>
+                    </div>
+                    <p class="text-gray-700 mb-3">负责线上业务和线下展会的整体数据优化</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-2">
+                        <li>GPS位置专项分析，用于展前分人群做精细化运营以及支撑展会选址。</li>
+                        <li>会员多单专项：挖掘付费用户、多单人群特征，构建LR模型做展前用户付费、下单预测，杭州冬季展付费转化率提升<span class="achievement">23pct</span>，多单率提升<span class="achievement">7pct</span>。</li>
+                    </ul>
+                </div>
+
+                <!-- 盈富斯科技 -->
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                        <h3 class="font-bold text-lg">PatPat - 盈富斯科技(InterFocus)跨境电商</h3>
+                        <span class="text-gray-500">杭州</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <p class="font-semibold">数据分析师</p>
+                        <p class="text-sm text-gray-500">2019.07 - 2021.07</p>
+                    </div>
+                    <p class="text-gray-700 mb-3">负责用户增长运营、品类运营，旨在挖掘用户关键行为，提升留存、复购，进而提升LTV和GMV</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-2">
+                        <li>关键行为挖掘：定位好评用户低发帖原因，量化发帖对复购的提升效果，落地好评自动发帖策略，带动30天复购率从21%提升至<span class="achievement">27%</span>。</li>
+                        <li>渠道与策略优化：分析各渠道用户留存与LTV，优化投放优先级，核心渠道ROI提升<span class="achievement">30%</span>；优化商品推荐逻辑，Push和EDM下单转化率分别提升<span class="achievement">55%</span>和<span class="achievement">39%</span>。</li>
+                        <li>用户复购提升项目：发现App端复购优势并推动资源倾斜，整体用户复购率提升<span class="achievement">18pct</span>，超额完成当期目标。</li>
+                        <li>流失用户召回项目：重新定义流失节点，构建流失预警模型，流失用户召回率提升<span class="achievement">3.5倍</span>。</li>
+                    </ul>
+                </div>
+
+                <!-- 杭州边锋网络科技 -->
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                        <h3 class="font-bold text-lg">杭州边锋网络科技-浙数传媒旗下</h3>
+                        <span class="text-gray-500">杭州</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <p class="font-semibold">数据运营</p>
+                        <p class="text-sm text-gray-500">2018.04 - 2019.06</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-2">
+                        <li>通过用户访谈与竞品分析优化产品功能，主导下载流程优化，用户注册转化率从9%提升至<span class="achievement">15%</span>。</li>
+                        <li>负责活动运营与渠道拓展，优化机器人匹配机制与场次推荐，每日充值额提升<span class="achievement">2倍</span>。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实习经历模块 -->
+        <section id="intern" class="mb-12 bg-white rounded-lg shadow p-6 md:p-8 card-hover">
+            <h2 class="section-title">实习经历</h2>
+            <div class="relative border-l-2 border-gray-200 pl-4">
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                        <h3 class="font-bold text-lg">阿里国际事业部全球合作伙伴ICBU-GP</h3>
+                        <span class="text-gray-500">杭州</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <p class="font-semibold">海外销售运营</p>
+                        <p class="text-sm text-gray-500">2017.02 - 2018.02</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-2">
+                        <li>用户运营：基于用户行为及地域特征分层，制定差异化激活策略，A/B测试优化邮件内容，邮件打开率从11.7%提升至<span class="achievement">39.6%</span>。</li>
+                        <li>核心客户维护：全程英文接待澳大利亚、尼泊尔、叙利亚等海外客户，介绍平台生态，维护B端客户关系。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 教育背景模块 -->
+        <section id="edu" class="mb-12 bg-white rounded-lg shadow p-6 md:p-8 card-hover">
+            <h2 class="section-title">教育背景</h2>
+            <div class="relative border-l-2 border-gray-200 pl-4">
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                        <h3 class="font-bold text-lg">浙江财经大学 财政税务学院</h3>
+                        <span class="text-gray-500">杭州</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-3">
+                        <p class="font-semibold">经济学学士 | 税收学专业</p>
+                        <p class="text-sm text-gray-500">2013.09 - 2017.06</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 ml-2">
+                        <li>成绩排名<span class="achievement">2/37</span>，中共党员</li>
+                        <li>校优秀学生二等奖奖学金</li>
+                        <li>第一届浙江省大学生经济管理案例分析大赛校一等奖</li>
+                        <li>五校联合营销大赛团体第二</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 专业技能模块 -->
+        <section id="skill" class="bg-white rounded-lg shadow p-6 md:p-8 card-hover">
+            <h2 class="section-title">相关技能</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-center gap-3 p-3 border border-gray-100 rounded-lg hover:border-primary transition-colors">
+                    <i class="fas fa-database text-primary text-xl w-6 text-center"></i>
+                    <span>数据处理：SQL、Excel(数据透视表/简单VBA)、Python(pandas/numpy)</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 border border-gray-100 rounded-lg hover:border-primary transition-colors">
+                    <i class="fas fa-machine-learning text-primary text-xl w-6 text-center"></i>
+                    <span>机器学习：scikit-learn、XGBoost、LR模型构建与应用</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 border border-gray-100 rounded-lg hover:border-primary transition-colors">
+                    <i class="fas fa-chart-line text-primary text-xl w-6 text-center"></i>
+                    <span>数据可视化：Tableau</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 border border-gray-100 rounded-lg hover:border-primary transition-colors">
+                    <i class="fas fa-file-alt text-primary text-xl w-6 text-center"></i>
+                    <span>工具设计：Visio、Xmind(产品原型/思维导图)</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 border border-gray-100 rounded-lg hover:border-primary transition-colors">
+                    <i class="fas fa-code text-primary text-xl w-6 text-center"></i>
+                    <span>自动化：Python报表自动化、AI自助取数流程搭建</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 border border-gray-100 rounded-lg hover:border-primary transition-colors">
+                    <i class="fas fa-language text-primary text-xl w-6 text-center"></i>
+                    <span>语言能力：CET6、全程英文接待海外客户</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-neutral text-white py-6 px-4">
+        <div class="max-w-4xl mx-auto text-center text-sm">
+            <p>徐方源 - 数据分析师 个人简历 | 求职专用</p>
+            <p class="mt-2 text-gray-400">更新时间：2025年</p>
+        </div>
+    </footer>
+
+    <!-- 移动端菜单脚本 -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        // 菜单展开/收起
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // 点击菜单链接后关闭移动端菜单
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow');
+            } else {
+                nav.classList.remove('shadow');
+            }
+        });
+    </script>
+</body>
+</html>
